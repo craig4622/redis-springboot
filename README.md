@@ -1,2 +1,7 @@
 # redis-springboot
 springboot2.x整合redis
+
+#自定义的redis配置属性,这里使用了自定义值通过java设置redis连接数据和jedis连接池属性,因为
+#通过spring.redis...设置相关redis属性,application.properties少了很多类似testOnBorrow,convertPipelineAndTxResults等属性设置
+#所以需要java设置jedis连接池属性,如果只是需要对redis简单的设置,那就只需要在application.properties设置spring.redis..相关属性
+#就可以了,不需要通过这里类似RedisConfig通过java进行详细设置
